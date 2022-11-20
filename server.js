@@ -17,7 +17,7 @@ app.get('/app/', (req, res, next) => {
     res.send("Status code : 200 OK")
 });
 
-app.post('/app/roll/', (req, res, next) => {
+app.get('/app/roll/', (req, res, next) => {
     res.status(200).json(roll.roll(6,2,1));
 });
 
@@ -34,7 +34,7 @@ app.post('/app/roll/:sides/:dice/:rolls', (req, res, next) => {
 });
 
 app.listen(port, () => {
-    console.log("Server is listening on port " + port);
+    //console.log("Server is listening on port " + port);
 });
 
 //console.log(roll.roll(6,3,3));
