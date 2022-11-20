@@ -33,9 +33,9 @@ app.post('/app/roll/:sides/:dice/:rolls', (req, res, next) => {
     res.status(200).json(roll.roll(req.params.sides,req.params.dice,req.params.rolls));
 });
 
-app.get('*', (req, res, next) => {
-    res.status(404);
-});
+// app.get('*', (req, res, next) => {
+//     res.status(404);
+// });
 
 app.listen(port, () => {
     //console.log("Server is listening on port " + port);
