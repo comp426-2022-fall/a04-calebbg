@@ -17,7 +17,7 @@ app.get('/app/', (req, res, next) => {
     res.send("Status code : 200 OK")
 });
 
-app.get('/app/roll/', (req, res, next) => {
+app.post('/app/roll/', (req, res, next) => {
     res.status(200).json(roll.roll(6,2,1));
 });
 
