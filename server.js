@@ -37,9 +37,10 @@ app.get('/app/roll/:sides/:dice/:rolls', (req, res, next) => {
     res.status(200).json(roll.roll(parseInt(req.params.sides),parseInt(req.params.dice),parseInt(req.params.rolls))).end();
 });
 
-// app.get('*', (req, res, next) => {
-//     res.status(404);
-// });
+app.get('*', (req, res, next) => {
+    res.status(404);
+    res.send("Status code : 404 Nonexistent endpoint");
+});
 
 app.listen(port, () => {
     // console.log("Server is listening on port " + port);
