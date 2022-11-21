@@ -39,7 +39,7 @@ app.get('/app/roll/:sides/:dice/:rolls', (req, res, next) => {
 
 app.get('*', (req, res, next) => {
     res.status(404);
-    res.send("Status code : 404 Nonexistent endpoint");
+    res.send("404 NOT FOUND");
 });
 
 app.listen(port, () => {
