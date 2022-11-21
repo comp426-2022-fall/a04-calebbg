@@ -17,19 +17,19 @@ app.get('/app/', (req, res, next) => {
     res.send("Status code : 200 OK");
 });
 
-app.post('/app/roll/', (req, res, next) => {
+app.get('/app/roll/', (req, res, next) => {
     res.status(200).json(roll.roll(6,2,1)).end();
 });
 
-app.post('/app/roll/:sides', (req, res, next) => {
+app.get('/app/roll/:sides', (req, res, next) => {
     res.status(200).json(roll.roll(req.params.sides,2,1)).end();
 });
 
-app.post('/app/roll/:sides/:dice', (req, res, next) => {
+app.get('/app/roll/:sides/:dice', (req, res, next) => {
     res.status(200).json(roll.roll(req.params.sides,req.params.dice,1)).end();
 });
 
-app.post('/app/roll/:sides/:dice/:rolls', (req, res, next) => {
+app.get('/app/roll/:sides/:dice/:rolls', (req, res, next) => {
     res.status(200).json(roll.roll(req.params.sides,req.params.dice,req.params.rolls)).end();
 });
 
