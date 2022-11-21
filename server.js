@@ -21,6 +21,10 @@ app.get('/app/roll/', (req, res, next) => {
     res.status(200).json(roll.roll(6,2,1)).end();
 });
 
+app.post('/app/roll/', (req, res, next) => {
+    res.status(200).json(roll.roll(parseInt(req.body.sides),parseInt(req.body.dice),parseInt(req.body.rolls))).end();
+});
+
 app.get('/app/roll/:sides', (req, res, next) => {
     res.status(200).json(roll.roll(parseInt(req.params.sides),2,1)).end();
 });
